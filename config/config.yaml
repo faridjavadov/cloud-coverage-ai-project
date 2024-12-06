@@ -1,0 +1,24 @@
+data_paths:
+  raw: 'data/raw'
+  processed: 'data/processed'
+  csv_file: 'data/cloud_classification_export.csv'
+
+model_params:
+  img_size: [224, 224] 
+  batch_size: 64
+  learning_rate: 0.001
+  epochs: 10
+  validation_split: 0.2
+  num_workers: 8
+  pin_memory: true
+
+tensorboard:
+  log_dir: 'runs'
+  experiment_name: 'cloud_classification'
+
+class_mapping:
+  Very Low: 0
+  Low: 1
+  Medium: 2
+  High: 3
+  Very High: 4
